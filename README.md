@@ -36,25 +36,13 @@ Individual result files can also be imported directly.
 
 ## Main results
 
-**[Étale schemes over a field](Lean4/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean)**
-
-Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group.
-
-**[Finite étale Galois categories](Lean4/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean)**
-
-Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1.
-
-**[Fundamental groups and inverse limits](Lean4/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean)**
-
-The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups.
-
-**[The geometric–arithmetic exact sequence](Lean4/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean)**
-
-The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme.
-
-**[Decomposition and inertia over a DVR](Lean4/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean)**
-
-Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR.
+| Result | Mathematical content |
+| --- | --- |
+| [Étale schemes over a field](Lean4/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean) | Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group. |
+| [Finite étale Galois categories](Lean4/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
+| [Inverse-limit comparison](Lean4/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean) | The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups. |
+| [Arithmetic exact sequence](Lean4/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
+| [DVR inertia and decomposition](Lean4/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
 
 ## Stacks Project coverage
 
