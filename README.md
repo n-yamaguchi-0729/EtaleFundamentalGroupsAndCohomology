@@ -5,8 +5,6 @@
 
 A Lean 4.35.0-rc2 library for étale fundamental groups and étale cohomology.
 
-All original code in this library is written by OpenAI Codex.
-
 The construction of finite étale Galois categories, geometric fiber functors,
 and fundamental groups incorporates substantial code from
 [Christian Merten's pi1](https://github.com/chrisflav/pi1), adapted and extended
@@ -100,6 +98,8 @@ lake --wfail build
 with warnings treated as errors.
 
 ## Authorship
+
+All original code in this library is written by OpenAI Codex.
 
 [Naganori Yamaguchi](https://github.com/n-yamaguchi-0729) sets the mathematical
 goals and scope, directs development, and maintains the library.
