@@ -4,35 +4,16 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 A Lean 4.35.0-rc2 library for étale fundamental groups and étale cohomology.
-The fundamental-group library develops the results of
-[Stacks Project, Chapter 58: Fundamental Groups of Schemes](https://stacks.math.columbia.edu/tag/0BQ6).
-The chapter is partially formalized; its coverage is listed below.
 
 The construction of finite étale Galois categories, geometric fiber functors,
 and fundamental groups incorporates substantial code from
 [Christian Merten's pi1](https://github.com/chrisflav/pi1), adapted and extended
 for this library.
 
-## Public API
+## Scope
 
-Import either complete library with:
-
-```lean
-import EtaleFundamentalGroups.All
-import EtaleCohomology.All
-```
-
-Focused imports include:
-
-```lean
-import EtaleFundamentalGroups.FiniteEtale.All
-import EtaleFundamentalGroups.GeometricFiber.All
-import EtaleFundamentalGroups.Inertia.All
-import EtaleCohomology.Classical.All
-import EtaleCohomology.Constructible.All
-```
-
-Individual result files can also be imported directly.
+The fundamental-group library develops the results of
+[Stacks Project, Chapter 58: Fundamental Groups of Schemes](https://stacks.math.columbia.edu/tag/0BQ6).
 
 ## Main results
 
@@ -44,7 +25,7 @@ Individual result files can also be imported directly.
 | [Arithmetic exact sequence](Lean4/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
 | [DVR inertia and decomposition](Lean4/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
 
-## Stacks Project coverage
+### Stacks Project coverage
 
 The numbering below follows Chapter 58 at revision `ed88ff78`; links use the
 Stacks Project's permanent tags. Completed coverage includes results supplied
@@ -64,7 +45,9 @@ by upstream libraries as well as proofs added here.
 | 58.13.1, 2, 4–6 | Decomposition and inertia groups, the kernel from the generic point, unramifiedness, and wild and tame inertia over a DVR ([0BTD](https://stacks.math.columbia.edu/tag/0BTD), [0BUA](https://stacks.math.columbia.edu/tag/0BUA)). |
 | 58.14.1–3 | Inverse limits, perfection, and the geometric–arithmetic exact sequence ([0BTV](https://stacks.math.columbia.edu/tag/0BTV), [0BTX](https://stacks.math.columbia.edu/tag/0BTX)). |
 
-The following parts remain incomplete:
+## Incomplete results
+
+The chapter is partially formalized; the following results remain incomplete.
 
 | Items | Current scope and remaining results |
 | --- | --- |
@@ -78,6 +61,25 @@ The following parts remain incomplete:
 | 58.21–26 | Purity and related extension theorems remain incomplete. |
 | 58.27–30 | Lefschetz theorems, purity of the branch locus, affineness of complements, and specialization in smooth proper families remain incomplete. |
 | 58.31–32 | Kummer covers and inertia constructions are present; the complete tame-ramification and positive-characteristic results remain incomplete. |
+
+## Public API
+
+Import either complete library with:
+
+```lean
+import EtaleFundamentalGroups.All
+import EtaleCohomology.All
+```
+
+Focused imports include:
+
+```lean
+import EtaleFundamentalGroups.FiniteEtale.All
+import EtaleFundamentalGroups.GeometricFiber.All
+import EtaleFundamentalGroups.Inertia.All
+import EtaleCohomology.Classical.All
+import EtaleCohomology.Constructible.All
+```
 
 ## Build
 
