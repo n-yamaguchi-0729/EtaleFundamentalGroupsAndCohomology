@@ -11,7 +11,7 @@ The chapter is partially formalized; its coverage is listed below.
 The construction of finite étale Galois categories, geometric fiber functors,
 and fundamental groups incorporates substantial code from
 [Christian Merten's pi1](https://github.com/chrisflav/pi1), adapted and extended
-for this library. It also uses Mathlib's theory of Galois categories.
+for this library.
 
 ## Public API
 
@@ -36,19 +36,31 @@ Individual result files can also be imported directly.
 
 ## Main results
 
-| Declaration | Mathematical content |
-| --- | --- |
-| [`AlgebraicGeometry.Scheme.Etale.equivDiscreteContAction`](Lean4/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean) | Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group. |
-| [`AlgebraicGeometry.FiniteEtale.galoisCategory`](Lean4/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
-| [`AlgebraicGeometry.FiniteEtale.InverseLimitDiagram.fundamentalGroupInverseLimitEquiv`](Lean4/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean) | The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups. |
-| [`AlgebraicGeometry.FiniteEtale.arithmetic_exactSequence_of_isAlgClosure`](Lean4/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
-| [`EtaleFundamentalGroups.Inertia.normalizationDVR_ramification`](Lean4/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
+**[Étale schemes over a field](Lean4/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean)**
+
+Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group.
+
+**[Finite étale Galois categories](Lean4/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean)**
+
+Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1.
+
+**[Fundamental groups and inverse limits](Lean4/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean)**
+
+The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups.
+
+**[The geometric–arithmetic exact sequence](Lean4/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean)**
+
+The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme.
+
+**[Decomposition and inertia over a DVR](Lean4/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean)**
+
+Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR.
 
 ## Stacks Project coverage
 
 The numbering below follows Chapter 58 at revision `ed88ff78`; links use the
 Stacks Project's permanent tags. Completed coverage includes results supplied
-by pi1 and Mathlib as well as proofs added here.
+by upstream libraries as well as proofs added here.
 
 | Completed numbered items | Content |
 | --- | --- |
@@ -81,7 +93,7 @@ The following parts remain incomplete:
 
 ## Build
 
-Lean and Mathlib versions are pinned in [`lean-toolchain`](lean-toolchain)
+The toolchain and dependencies are pinned in [`lean-toolchain`](lean-toolchain)
 and [`lakefile.toml`](lakefile.toml).
 
 ```console
@@ -106,12 +118,11 @@ Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 The repository includes 25 source files bearing attribution to
 [pi1](https://github.com/chrisflav/pi1), by Christian Merten, with Andrew Yang
 also credited in some files. These files have been adapted for current
-Lean/Mathlib APIs, proof repairs, and the module structure used here.
+toolchain and library APIs, proof repairs, and the module structure used here.
 File mappings, revision information, and attribution details are preserved
 in [NOTICE](NOTICE).
 
 Supporting code also includes adaptations from
 [Anthropic's Fermat's Last Theorem project](https://github.com/anthropics/fermats-last-theorem).
 Its upstream notices, authors, and licenses are preserved in NOTICE and the
-source headers. The library builds on
-[Mathlib](https://github.com/leanprover-community/mathlib4) and its contributors.
+source headers.
