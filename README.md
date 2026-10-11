@@ -10,6 +10,9 @@ and fundamental groups incorporates substantial code from
 [Christian Merten's pi1](https://github.com/chrisflav/pi1), adapted and extended
 for this library.
 
+This library is extracted from [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
+Bundled dependencies use the same `Nyll` imports as the complete library.
+
 ## Scope
 
 The fundamental-group library develops the results of
@@ -19,11 +22,13 @@ The fundamental-group library develops the results of
 
 | Result | Mathematical content |
 | --- | --- |
-| [Étale schemes over a field](Lean4/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean) | Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group. |
-| [Finite étale Galois categories](Lean4/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
-| [Inverse-limit comparison](Lean4/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean) | The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups. |
-| [Arithmetic exact sequence](Lean4/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
-| [DVR inertia and decomposition](Lean4/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
+| [Étale schemes over a field](Nyll/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean) | Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group. |
+| [Finite étale Galois categories](Nyll/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
+| [Inverse-limit comparison](Nyll/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean) | The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups. |
+| [Arithmetic exact sequence](Nyll/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
+| [DVR inertia and decomposition](Nyll/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
+| [Galois covers from open normal subgroups](Nyll/EtaleFundamentalGroups/GaloisCovers/OpenNormalFundamentalGroup.lean) | Every open normal subgroup is realized by a pointed finite étale Galois cover, compatibly with the induced fundamental-group map. |
+| [Proper homotopy sequence](Nyll/EtaleFundamentalGroups/GeometricFiber/ProperHomotopyExact.lean) | For a proper, flat, finitely presented morphism with geometrically reduced connected fibers over a connected base, the geometric-fiber image is the kernel of the fundamental-group map. |
 
 ### Stacks Project coverage
 
@@ -51,12 +56,10 @@ The chapter is partially formalized; the following results remain incomplete.
 
 | Items | Current scope and remaining results |
 | --- | --- |
-| 58.7 | Galois-cover characterizations, domination, and common dominating covers are implemented. The full correspondence with normal open subgroups remains incomplete. |
-| 58.9.1–3 | Auxiliary adic and proper local constructions are present; the proper henselian comparison and invariance under algebraically closed field extension remain incomplete ([0A48](https://stacks.math.columbia.edu/tag/0A48), [0A49](https://stacks.math.columbia.edu/tag/0A49)). |
+| 58.9.1–3 | Closed-fiber pullback is fully faithful over an arbitrary henselian local base. Essential surjectivity and invariance under algebraically closed field extension remain incomplete ([0A48](https://stacks.math.columbia.edu/tag/0A48), [0A49](https://stacks.math.columbia.edu/tag/0A49)). |
 | 58.10.6, 8 | The local exact sequence and its kernel description remain incomplete ([0BSB](https://stacks.math.columbia.edu/tag/0BSB), [0BSC](https://stacks.math.columbia.edu/tag/0BSC)). |
 | 58.12.5 | Filtered étale-colimit constructions are present; the chapter result is not yet included in completed coverage ([0BSU](https://stacks.math.columbia.edu/tag/0BSU)). |
 | 58.13.3 | The quadratic invariant ring, finiteness, normality, and degree-two calculation are implemented. The branch-locus and codimension calculations remain incomplete ([0BTE](https://stacks.math.columbia.edu/tag/0BTE)). |
-| 58.15.1–2 | Relative normalization and geometric-fiber constructions are present; finite étaleness of the Stein factor and middle exactness of the homotopy sequence remain incomplete ([0BUN](https://stacks.math.columbia.edu/tag/0BUN), [0C0J](https://stacks.math.columbia.edu/tag/0C0J)). |
 | 58.16–20 | Specialization, formal restriction, pushouts, and extension from punctured spectra remain incomplete. |
 | 58.21–26 | Purity and related extension theorems remain incomplete. |
 | 58.27–30 | Lefschetz theorems, purity of the branch locus, affineness of complements, and specialization in smooth proper families remain incomplete. |
@@ -67,18 +70,18 @@ The chapter is partially formalized; the following results remain incomplete.
 Import either complete library with:
 
 ```lean
-import EtaleFundamentalGroups.All
-import EtaleCohomology.All
+import Nyll.EtaleFundamentalGroups.All
+import Nyll.EtaleCohomology.All
 ```
 
 Focused imports include:
 
 ```lean
-import EtaleFundamentalGroups.FiniteEtale.All
-import EtaleFundamentalGroups.GeometricFiber.All
-import EtaleFundamentalGroups.Inertia.All
-import EtaleCohomology.Classical.All
-import EtaleCohomology.Constructible.All
+import Nyll.EtaleFundamentalGroups.FiniteEtale.All
+import Nyll.EtaleFundamentalGroups.GeometricFiber.All
+import Nyll.EtaleFundamentalGroups.Inertia.All
+import Nyll.EtaleCohomology.Classical.All
+import Nyll.EtaleCohomology.Constructible.All
 ```
 
 ## Build

@@ -111,7 +111,7 @@
       "configFile": "lakefile.toml"
     }
   ],
-  "name": "EtaleFundamentalGroupsAndCohomology",
+  "name": "Nyll",
   "lakeDir": ".lake",
   "fixedToolchain": false
 }
