@@ -23,7 +23,7 @@ The fundamental-group library develops the results of
 | Result | Mathematical content |
 | --- | --- |
 | [Étale schemes over a field](Nyll/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean) | Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group. |
-| [Finite étale Galois categories](Nyll/EtaleFundamentalGroups/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
+| [Finite étale Galois categories](Nyll/EtaleFundamentalGroups/Pi1/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
 | [Inverse-limit comparison](Nyll/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean) | The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups. |
 | [Arithmetic exact sequence](Nyll/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
 | [DVR inertia and decomposition](Nyll/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
@@ -109,12 +109,13 @@ Imported code retains its original authorship and copyright notices.
 
 Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
-The repository includes 25 source files bearing attribution to
-[pi1](https://github.com/chrisflav/pi1), by Christian Merten, with Andrew Yang
-also credited in some files. These files have been adapted for current
+The pi1-derived modules adapt [pi1](https://github.com/chrisflav/pi1), by
+Christian Merten, with Andrew Yang also credited in some files, for the pinned
 toolchain and library APIs, proof repairs, and the module structure used here.
-File mappings, revision information, and attribution details are preserved
-in [NOTICE](NOTICE).
+File mappings, the fixed comparison revision, and the distinction between
+upstream adaptations and local additions are recorded in
+[ATTRIBUTION.md](Nyll/EtaleFundamentalGroups/Pi1/ATTRIBUTION.md),
+[UPSTREAM.json](Nyll/EtaleFundamentalGroups/Pi1/UPSTREAM.json), and [NOTICE](NOTICE).
 
 Supporting code also includes adaptations from
 [Anthropic's Fermat's Last Theorem project](https://github.com/anthropics/fermats-last-theorem).

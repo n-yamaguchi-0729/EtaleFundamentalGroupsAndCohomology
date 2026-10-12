@@ -12,3 +12,7 @@ import Nyll.ClassFieldTheory.All
 import Nyll.AlgebraicCurves.All
 import Nyll.EtaleFundamentalGroups.All
 import Nyll.EtaleCohomology.All
+
+/-!
+Aggregate of the maintained libraries included in this public extract.
+-/
