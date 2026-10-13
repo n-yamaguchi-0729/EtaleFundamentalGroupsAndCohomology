@@ -3,99 +3,75 @@
 [![Lean](https://github.com/n-yamaguchi-0729/EtaleFundamentalGroupsAndCohomology/actions/workflows/lean.yml/badge.svg)](https://github.com/n-yamaguchi-0729/EtaleFundamentalGroupsAndCohomology/actions/workflows/lean.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-A Lean 4.35.0-rc2 library for étale fundamental groups and étale cohomology.
+Lean libraries for étale fundamental groups and étale cohomology, extracted
+from [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
 
-The construction of finite étale Galois categories, geometric fiber functors,
-and fundamental groups incorporates substantial code from
-[Christian Merten's pi1](https://github.com/chrisflav/pi1), adapted and extended
-for this library.
+## Goal and coverage
 
-This library is extracted from [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
-Bundled dependencies use the same `Nyll` imports as the complete library.
+The goal is a **complete formalization** of the corresponding Stacks Project material:
 
-## Scope
+- **EFG:** [Chapter 58 — Fundamental Groups of Schemes](https://stacks.math.columbia.edu/tag/0BQ6).
+- **Étale cohomology:** [Chapter 59](https://stacks.math.columbia.edu/tag/03N1), [Chapter 63 — More Étale Cohomology](https://stacks.math.columbia.edu/tag/0F4U), and [Chapter 64 — The Trace Formula](https://stacks.math.columbia.edu/tag/0F5P), including the Grothendieck–Lefschetz trace formula and its consequences.
 
-The fundamental-group library develops the results of
-[Stacks Project, Chapter 58: Fundamental Groups of Schemes](https://stacks.math.columbia.edu/tag/0BQ6).
+All these chapters remain in progress. The tables below describe the
+**published source**, audited on 2026-10-13. Completed coverage includes
+upstream definitions and results; restricted cases are labelled separately.
+Chapter 58 numbering follows revision `ed88ff78`; tags provide stable references.
 
-## Main results
+### Chapter 58: formalized numbered items
 
-| Result | Mathematical content |
+| Items | Content |
 | --- | --- |
-| [Étale schemes over a field](Nyll/EtaleFundamentalGroups/GeometricFiber/EtaleOverFieldEquivalence.lean) | Étale schemes over a field are equivalent to discrete continuous sets with an action of its absolute Galois group. |
-| [Finite étale Galois categories](Nyll/EtaleFundamentalGroups/Pi1/FiniteEtale/GaloisCategory.lean) | Finite étale covers of a connected scheme form a Galois category, with the geometric fiber as fiber functor. This construction is adapted from pi1. |
-| [Inverse-limit comparison](Nyll/EtaleFundamentalGroups/FiniteEtale/InverseLimitComparison.lean) | The fundamental group of an inverse limit of qcqs schemes with affine transition maps is the inverse limit of their fundamental groups. |
-| [Arithmetic exact sequence](Nyll/EtaleFundamentalGroups/GeometricFiber/ArithmeticAlgebraicClosure.lean) | The short exact sequence relating the geometric fundamental group, arithmetic fundamental group, and absolute Galois group for a geometrically connected qcqs scheme. |
-| [DVR inertia and decomposition](Nyll/EtaleFundamentalGroups/Inertia/NormalizationDVRRamification.lean) | Decomposition and inertia groups, wild inertia, and the tame character for normalization in a Galois extension of the fraction field of a DVR. |
-| [Galois covers from open normal subgroups](Nyll/EtaleFundamentalGroups/GaloisCovers/OpenNormalFundamentalGroup.lean) | Every open normal subgroup is realized by a pointed finite étale Galois cover, compatibly with the induced fundamental-group map. |
-| [Proper homotopy sequence](Nyll/EtaleFundamentalGroups/GeometricFiber/ProperHomotopyExact.lean) | For a proper, flat, finitely presented morphism with geometrically reduced connected fibers over a connected base, the geometric-fiber image is the kernel of the fundamental-group map. |
+| 58.2.1–3 | Étale schemes over fields and continuous Galois actions ([03QR](https://stacks.math.columbia.edu/tag/03QR)). |
+| 58.3.1–11 | Galois categories, profinite completion, fiber functors and exact functors ([0BN5](https://stacks.math.columbia.edu/tag/0BN5)). |
+| 58.4.1–5 | Criteria for surjectivity, injectivity, normality and exactness. |
+| 58.5.1–5 | Finite étale Galois categories and internal Hom ([0BL7](https://stacks.math.columbia.edu/tag/0BL7)). |
+| 58.6.1–4 | Fundamental groups, finite actions and change of base point ([0BNE](https://stacks.math.columbia.edu/tag/0BNE)). |
+| 58.8.1–4 | Henselian pairs, thickenings and universal homeomorphisms ([0BQN](https://stacks.math.columbia.edu/tag/0BQN)). |
+| 58.10.1–5, 7 | Dense pullback and geometrically unibranch schemes ([0BQI](https://stacks.math.columbia.edu/tag/0BQI)). |
+| 58.11.1–4 | Normalization and the normal-local fundamental-group sequence ([0BQM](https://stacks.math.columbia.edu/tag/0BQM)). |
+| 58.12.1–5 | Residue fields, strict henselianity, inertia invariants and filtered étale colimits ([0BSU](https://stacks.math.columbia.edu/tag/0BSU)). |
+| 58.13.1–2, 4–6 | Decomposition, inertia, unramifiedness and tame/wild inertia ([0BUA](https://stacks.math.columbia.edu/tag/0BUA)). |
+| 58.14.1–3 | Inverse limits, perfection and the arithmetic exact sequence ([0BTX](https://stacks.math.columbia.edu/tag/0BTX)). |
+| 58.15.1–2 | Finite étale Stein factor and the proper homotopy exact sequence. |
+| 58.17.5 | Faithfulness when a closed subscheme meets every connected component. |
+| 58.19.2 | Faithfulness of punctured hypersurface restriction. |
+| 58.20.2 | Extension criterion using the actual global-sections algebra. |
+| 58.21.1, 6 | Height-one boundary primes and local-to-global purity. |
+| 58.22.1 | Faithfulness near a punctured hypersurface, including germs ([0BLN](https://stacks.math.columbia.edu/tag/0BLN)). |
 
-### Stacks Project coverage
+Other Chapter 58 items are not claimed complete. In particular, 58.9.1–3,
+58.10.6, 8, 58.13.3 and the remaining specialization, Lefschetz,
+purity and tame-ramification results are still under development or review.
+The standard Kummer calculations do not yet complete 58.31.4 ([0EYF](https://stacks.math.columbia.edu/tag/0EYF)).
 
-The numbering below follows Chapter 58 at revision `ed88ff78`; links use the
-Stacks Project's permanent tags. Completed coverage includes results supplied
-by upstream libraries as well as proofs added here.
+### Étale cohomology: checked numbered endpoints
 
-| Completed numbered items | Content |
+| Item | Status in this library |
 | --- | --- |
-| 58.2.1–3 | Étale schemes over a field and continuous Galois actions ([03QR](https://stacks.math.columbia.edu/tag/03QR)). |
-| 58.3.1–11 | Galois categories, profinite completion, uniqueness of fiber functors, and exact functors ([0BN5](https://stacks.math.columbia.edu/tag/0BN5)). |
-| 58.4.1–5 | Categorical criteria for surjectivity, injectivity, normality, and exactness of fundamental-group maps. |
-| 58.5.1–5 | Finite étale Galois categories and internal Hom, including compatibility with base change ([0BL7](https://stacks.math.columbia.edu/tag/0BL7)). |
-| 58.6.1–4 | Fundamental groups, finite continuous actions, change of base point, and the absolute Galois group of a field ([0BNE](https://stacks.math.columbia.edu/tag/0BNE)). |
-| 58.8.1–4 | Invariance under henselian pairs, thickenings, and universal homeomorphisms ([0BQN](https://stacks.math.columbia.edu/tag/0BQN)). |
-| 58.10.1–5, 7 | Faithfulness and full faithfulness of dense pullback; surjectivity from dense opens and generic points in the geometrically unibranch case ([0BQI](https://stacks.math.columbia.edu/tag/0BQI)). |
-| 58.11.1–4 | Normalization, maximal unramified extensions, and the fundamental-group exact sequence for a normal local ring ([0BQM](https://stacks.math.columbia.edu/tag/0BQM)). |
-| 58.12.1–4 | Residue fields of normalizations, strict henselianity, inertia under base change, and étaleness of invariant rings. |
-| 58.13.1, 2, 4–6 | Decomposition and inertia groups, the kernel from the generic point, unramifiedness, and wild and tame inertia over a DVR ([0BTD](https://stacks.math.columbia.edu/tag/0BTD), [0BUA](https://stacks.math.columbia.edu/tag/0BUA)). |
-| 58.14.1–3 | Inverse limits, perfection, and the geometric–arithmetic exact sequence ([0BTV](https://stacks.math.columbia.edu/tag/0BTV), [0BTX](https://stacks.math.columbia.edu/tag/0BTX)). |
+| [59.64.4 / 03RV](https://stacks.math.columbia.edu/tag/03RV) | **Complete:** finite locally constant set sheaves are equivalent to finite étale schemes ([proof](Nyll/EtaleCohomology/Constructible/FiniteLocallyConstantEquivalence.lean)). |
+| [59.28.1 / 03PL](https://stacks.math.columbia.edu/tag/03PL) | **Small-site case proved:** the Kummer exact sequence for positive invertible exponents; big-site statement remains ([proof](Nyll/EtaleCohomology/Classical/KummerSequence.lean)). |
+| [59.70.8 / 095L](https://stacks.math.columbia.edu/tag/095L) | **Module-sheaf case proved:** open/closed localization, with its cohomology long exact sequence ([proof](Nyll/EtaleCohomology/Classical/Localization.lean)). |
+| [59.91.3 / 0A3S](https://stacks.math.columbia.edu/tag/0A3S) | **Module-sheaf H⁰ case proved:** proper henselian closed-fiber comparison; general set-sheaf statement remains ([proof](Nyll/EtaleCohomology/Sites/ProperHenselianH0.lean)). |
+| 59.70–73; [64.18.8 / 03UT](https://stacks.math.columbia.edu/tag/03UT) | **Partial:** open-immersion extension by zero, constructible module sheaves, and ordinary constant-coefficient ℓ-adic inverse limits. |
+| 59.91; 63.12; [64.20.4 / 03V3](https://stacks.math.columbia.edu/tag/03V3), [64.20.5 / 03V2](https://stacks.math.columbia.edu/tag/03V2) | **Unfinished:** higher proper base change, compactly supported cohomology, and finite/ℓ-adic trace formulas. |
 
-## Incomplete results
+This is a checked endpoint list, not a claim that the other results of
+Chapters 59, 63 or 64 have been formalized.
 
-The chapter is partially formalized; the following results remain incomplete.
-
-| Items | Current scope and remaining results |
-| --- | --- |
-| 58.9.1–3 | Closed-fiber pullback is fully faithful over an arbitrary henselian local base. Essential surjectivity and invariance under algebraically closed field extension remain incomplete ([0A48](https://stacks.math.columbia.edu/tag/0A48), [0A49](https://stacks.math.columbia.edu/tag/0A49)). |
-| 58.10.6, 8 | The local exact sequence and its kernel description remain incomplete ([0BSB](https://stacks.math.columbia.edu/tag/0BSB), [0BSC](https://stacks.math.columbia.edu/tag/0BSC)). |
-| 58.12.5 | Filtered étale-colimit constructions are present; the chapter result is not yet included in completed coverage ([0BSU](https://stacks.math.columbia.edu/tag/0BSU)). |
-| 58.13.3 | The quadratic invariant ring, finiteness, normality, and degree-two calculation are implemented. The branch-locus and codimension calculations remain incomplete ([0BTE](https://stacks.math.columbia.edu/tag/0BTE)). |
-| 58.16–20 | Specialization, formal restriction, pushouts, and extension from punctured spectra remain incomplete. |
-| 58.21–26 | Purity and related extension theorems remain incomplete. |
-| 58.27–30 | Lefschetz theorems, purity of the branch locus, affineness of complements, and specialization in smooth proper families remain incomplete. |
-| 58.31–32 | Kummer covers and inertia constructions are present; the complete tame-ramification and positive-characteristic results remain incomplete. |
-
-## Public API
-
-Import either complete library with:
+## Use and build
 
 ```lean
 import Nyll.EtaleFundamentalGroups.All
 import Nyll.EtaleCohomology.All
 ```
 
-Focused imports include:
-
-```lean
-import Nyll.EtaleFundamentalGroups.FiniteEtale.All
-import Nyll.EtaleFundamentalGroups.GeometricFiber.All
-import Nyll.EtaleFundamentalGroups.Inertia.All
-import Nyll.EtaleCohomology.Classical.All
-import Nyll.EtaleCohomology.Constructible.All
-```
-
-## Build
-
-The toolchain and dependencies are pinned in [`lean-toolchain`](lean-toolchain)
-and [`lakefile.toml`](lakefile.toml).
+From the repository root, with the pinned [`lean-toolchain`](lean-toolchain):
 
 ```console
 lake exe cache get
 lake --wfail build
 ```
-
-[CI](.github/workflows/lean.yml) checks imports and builds the libraries
-with warnings treated as errors.
 
 ## Authorship
 
