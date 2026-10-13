@@ -14,5 +14,18 @@ import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.RootFiberTransitivity
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.StandardCover
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerRamification
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerGenericFiber
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryGenericFiber
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryIntegralClosure
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryTamePrimes
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryTameCover
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryStalkGenericFiber
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.TameDVREquiv
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryStalkTame
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryStalkFieldFactors
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryCodimensionOneTame
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryStalkCartesian
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.StandardTameCodimensionOne
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.RelativeNormalization
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.NormalizationScheme
 
 /-! Canonical aggregate for EtaleFundamentalGroups.Kummer.AdjoinRoot. -/

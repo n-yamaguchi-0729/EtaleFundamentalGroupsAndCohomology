@@ -17,6 +17,7 @@ import Nyll.EtaleFundamentalGroups.GaloisCategories.FunctorFromHom
 import Nyll.EtaleFundamentalGroups.GaloisCategories.Functoriality
 import Nyll.EtaleFundamentalGroups.GaloisCategories.GaloisObjectQuotient
 import Nyll.EtaleFundamentalGroups.GaloisCategories.Injectivity
+import Nyll.EtaleFundamentalGroups.GaloisCategories.MorphismComponents
 import Nyll.EtaleFundamentalGroups.GaloisCategories.NormalImage
 import Nyll.EtaleFundamentalGroups.GaloisCategories.PointedOver
 import Nyll.EtaleFundamentalGroups.GaloisCategories.PointedOverTransport

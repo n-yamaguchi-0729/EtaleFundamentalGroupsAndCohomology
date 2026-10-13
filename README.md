@@ -6,6 +6,10 @@
 Lean 4.35.0-rc2 libraries for étale fundamental groups and étale cohomology, extracted
 from [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
 
+<!-- nyll-publication:distribution:begin -->
+Only the module-level import closure of `Nyll.EtaleFundamentalGroups.All`, `Nyll.EtaleCohomology.All` is bundled. Dependencies retain their canonical `Nyll` imports.
+<!-- nyll-publication:distribution:end -->
+
 ## Goal and coverage
 
 The goal is a complete formalization of the following Stacks Project chapters:
@@ -267,17 +271,9 @@ Imported code retains its original authorship and copyright notices.
 
 ## License and acknowledgements
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+<!-- nyll-publication:credits:begin -->
+Apache License 2.0. See [LICENSE](LICENSE).
 
-The pi1-derived modules adapt [pi1](https://github.com/chrisflav/pi1), by
-Christian Merten, with Andrew Yang also credited in some files, for the pinned
-toolchain and library APIs, proof repairs, and the module structure used here.
-File mappings, the fixed comparison revision, and the distinction between
-upstream adaptations and local additions are recorded in
-[ATTRIBUTION.md](Nyll/EtaleFundamentalGroups/Pi1/ATTRIBUTION.md),
-[UPSTREAM.json](Nyll/EtaleFundamentalGroups/Pi1/UPSTREAM.json), and [NOTICE](NOTICE).
-
-Supporting code also includes adaptations from
-[Anthropic's Fermat's Last Theorem project](https://github.com/anthropics/fermats-last-theorem).
-Its upstream notices, authors, and licenses are preserved in NOTICE and the
-source headers.
+Included adaptations from [pi1](https://github.com/chrisflav/pi1) and [Anthropic’s Fermat’s Last Theorem project](https://github.com/anthropics/fermats-last-theorem) retain their source-specific copyrights and authors.
+The included-file inventories and preserved upstream notices are in [NOTICE](NOTICE).
+<!-- nyll-publication:credits:end -->

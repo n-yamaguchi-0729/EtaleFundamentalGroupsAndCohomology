@@ -43,3 +43,4 @@ import Nyll.EtaleCohomology.Classical.KummerSequence
 import Nyll.EtaleCohomology.Classical.FieldGaloisAction
 
 import Nyll.EtaleCohomology.Classical.FieldHilbert90
+import Nyll.EtaleCohomology.Classical.FieldKummer
