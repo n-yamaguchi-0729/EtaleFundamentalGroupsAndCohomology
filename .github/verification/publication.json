@@ -6151,7 +6151,7 @@
     "Nyll/ValuedFieldTheory/Valuation/Topology/Models.lean": "2e07d617803cf381042a803a1fd8f0104b83f8a761e287f24a9c89291819e030",
     "Nyll/ValuedFieldTheory/Valuation/UniqueRing.lean": "d6c2818ece90e09191f3c7ded5709ee37fc21048e5f5ba5765adb6eb6b5d2848",
     "Nyll/ValuedFieldTheory/Valuation/ValuedAdicComplete.lean": "183b8dd3fb4910ec7378d280839436826d06929fa4e8081dd460e89cbd05d5fb",
-    "README.md": "b5e19afacbce27ac6b1d38b620596522256a36345a76c200da5c0f4cb8f5f174",
+    "README.md": "f3d2d80f3e22e052009e69b2dd7715d667afeafb3e76fa11fb5e479d271134f0",
     "lake-manifest.json": "ad850380b47b59868a88c7b76f8775a3fa5a55e432e1d111a007ff2ebf056ded",
     "lakefile.toml": "11cd899019917bae200e12644d8af7c5e0e2a4abe55bbb59529ed3ca9b3d71e9",
     "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"

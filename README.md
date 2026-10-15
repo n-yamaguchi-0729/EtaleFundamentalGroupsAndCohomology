@@ -6,6 +6,8 @@
 Lean 4.35.0-rc2 libraries for étale fundamental groups and étale cohomology, extracted
 from [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
 
+[Library overview and selected results](https://n-yamaguchi-0729.github.io/NYLL/libraries/etale-fundamental-groups-and-cohomology/).
+
 <!-- nyll-publication:distribution:begin -->
 Only the module-level import closure of `Nyll.EtaleFundamentalGroups.All`, `Nyll.EtaleCohomology.All` is bundled. Dependencies retain their canonical `Nyll` imports.
 <!-- nyll-publication:distribution:end -->
