@@ -9,7 +9,7 @@ import Nyll.SchemeTheory.FiniteEtale.Henselian.ChosenLocalization
 import Nyll.SchemeTheory.FiniteEtale.Henselian.ChosenLocalizationEtale
 import Nyll.SchemeTheory.FiniteEtale.Henselian.PointedEtale
 import Nyll.SchemeTheory.FiniteEtale.Henselian.Strict
-import Nyll.SchemeTheory.RingTheory.LocalMapLocalizationSurjective
+import Nyll.SchemeTheory.RingTheory.Localization.LocalMapLocalizationSurjective
 import Mathlib.AlgebraicGeometry.Morphisms.Etale
 import Mathlib.AlgebraicGeometry.Morphisms.RingHomProperties
 import Mathlib.RingTheory.Flat.FaithfullyFlat.Algebra

@@ -20,8 +20,8 @@ import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerGenericFiber
 import Nyll.EtaleFundamentalGroups.Kummer.Radicals.Explicit
 import Nyll.EtaleFundamentalGroups.Kummer.UnitAbsorption.HigherRadical
 import Nyll.EtaleFundamentalGroups.Kummer.UnitAbsorption.HigherRadicalActualFactor
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 
 /-!
 # The actual generic fiber of a boundary Kummer cover

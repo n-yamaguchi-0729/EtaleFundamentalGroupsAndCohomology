@@ -17,8 +17,8 @@ import Mathlib.RingTheory.RamificationInertia.Ramification
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.ReducedBoundary
 import Nyll.EtaleFundamentalGroups.Kummer.Radicals.Explicit
 import Nyll.EtaleFundamentalGroups.Ramification.BaseChange.Equiv
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 
 /-!
 # The literal integral closure at a reduced Kummer boundary

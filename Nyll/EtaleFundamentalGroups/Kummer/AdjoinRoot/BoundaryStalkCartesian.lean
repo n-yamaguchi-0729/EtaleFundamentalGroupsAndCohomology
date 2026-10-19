@@ -13,8 +13,8 @@ import Nyll.SchemeTheory.FiniteEtale.AffineEquivalence
 import Nyll.SchemeTheory.LocalGeometry.PuncturedDVR
 import Nyll.SchemeTheory.Pi1.FiniteEtale.Basic
 import Nyll.SchemeTheory.RingTheory.Ramification.TameDVR
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 import Mathlib.Algebra.Ring.NonZeroDivisors
 import Mathlib.AlgebraicGeometry.AffineScheme
 import Mathlib.AlgebraicGeometry.Noetherian

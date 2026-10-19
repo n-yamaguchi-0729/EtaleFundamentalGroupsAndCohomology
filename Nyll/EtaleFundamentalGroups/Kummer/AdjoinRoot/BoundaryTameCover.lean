@@ -17,8 +17,8 @@ import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryTamePrimes
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerGenericFiber
 import Nyll.EtaleFundamentalGroups.Kummer.Radicals.Explicit
 import Nyll.SchemeTheory.RingTheory.Ramification.TameDVR
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 
 /-!
 # Tameness of the actual boundary generic fibre of a standard root cover

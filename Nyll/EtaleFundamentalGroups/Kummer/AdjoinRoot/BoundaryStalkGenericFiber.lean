@@ -7,8 +7,8 @@ Authors: Naganori Yamaguchi (assisted by OpenAI Codex)
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryGenericFiber
 import Nyll.EtaleFundamentalGroups.Kummer.Radicals.Explicit
 import Nyll.SchemeTheory.Affine.StalkFractionField
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 import Mathlib.AlgebraicGeometry.Pullbacks
 import Mathlib.RingTheory.AdjoinRoot
 import Mathlib.RingTheory.Flat.FaithfullyFlat.Algebra

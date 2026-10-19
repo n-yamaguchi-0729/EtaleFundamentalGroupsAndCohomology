@@ -16,8 +16,8 @@ import Mathlib.RingTheory.Localization.FractionRing
 import Mathlib.RingTheory.RamificationInertia.Ramification
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryIntegralClosure
 import Nyll.EtaleFundamentalGroups.Kummer.Radicals.Explicit
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 
 /-!
 # Tame prime data of the actual boundary normalization

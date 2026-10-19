@@ -27,5 +27,19 @@ import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryStalkCartesian
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.StandardTameCodimensionOne
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.RelativeNormalization
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.NormalizationScheme
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.NormalDomainRoot
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.StrictHenselianRootEmbedding
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerCompletion
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerCompletionTower
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerNormalizationEtale
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.SmoothBaseChange
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerFiniteEtaleExtension
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.RootDivisorNormalization
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.SmoothSchemeChart
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerNormalizationScheme
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.SmoothRootNormalization
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.UniformizerGaloisNormalization
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.RootDivisorGaloisNormalization
+import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.SmoothGaloisRootNormalization
 
 /-! Canonical aggregate for EtaleFundamentalGroups.Kummer.AdjoinRoot. -/

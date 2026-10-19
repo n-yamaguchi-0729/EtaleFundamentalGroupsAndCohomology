@@ -8,6 +8,7 @@ import Nyll.EtaleFundamentalGroups.GaloisCategories.AutomorphismProfiniteComplet
 import Nyll.EtaleFundamentalGroups.GaloisCategories.ConnectedActions
 import Nyll.EtaleFundamentalGroups.GaloisCategories.ContinuousHomComparison
 import Nyll.EtaleFundamentalGroups.GaloisCategories.DiscreteCharacters
+import Nyll.EtaleFundamentalGroups.GaloisCategories.EquivalenceFunctoriality
 import Nyll.EtaleFundamentalGroups.GaloisCategories.ExactSequence
 import Nyll.EtaleFundamentalGroups.GaloisCategories.FiberFunctorComparison
 import Nyll.EtaleFundamentalGroups.GaloisCategories.FiberFunctorExactness
@@ -34,6 +35,8 @@ import Nyll.EtaleFundamentalGroups.GaloisCategories.AutomorphismInverseLimit
 import Nyll.EtaleFundamentalGroups.GaloisCategories.ConnectedSectionDescent
 import Nyll.EtaleFundamentalGroups.GaloisCategories.AutFunctorComparison
 import Nyll.EtaleFundamentalGroups.GaloisCategories.PointStabilizerMorphism
+import Nyll.EtaleFundamentalGroups.GaloisCategories.CoverTransport
+import Nyll.EtaleFundamentalGroups.GaloisCategories.CoverTransportFiber
 
 /-!
 # Galois categories and finite continuous actions

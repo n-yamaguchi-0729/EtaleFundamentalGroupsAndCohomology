@@ -24,6 +24,9 @@
     "EtaleCohomology": [
       "Nyll.EtaleCohomology"
     ],
+    "AbelianVarieties": [
+      "Nyll.AbelianVarieties"
+    ],
     "EntryPoint": [
       "Nyll"
     ]
@@ -62,7 +65,8 @@
     "ClassFieldTheory": 2,
     "AlgebraicCurves": 2,
     "EtaleFundamentalGroups": 2,
-    "EtaleCohomology": 2
+    "EtaleCohomology": 2,
+    "AbelianVarieties": 2
   },
   "orderedLibraries": [
     "ProCGroups",
@@ -72,7 +76,8 @@
     "ClassFieldTheory",
     "AlgebraicCurves",
     "EtaleFundamentalGroups",
-    "EtaleCohomology"
+    "EtaleCohomology",
+    "AbelianVarieties"
   ],
   "primaryRoots": [
     "Nyll.EtaleFundamentalGroups.All",

@@ -28,6 +28,16 @@ scope of the existing Hilbert 90 supplier used here. This does not assert the
 general Picard-group comparison or the positive-characteristic case.
 -/
 
+/-!
+# Kummer cohomology over characteristic-zero fields
+
+Geometric Hilbert 90 makes the actual Kummer boundary surjective in degree
+one. Consequently every roots-of-unity H1 class has a finite etale effacing
+cover of the prescribed degree. In degree two, the actual inclusion of
+roots of unity into Gm induces an injection on derived sheaf cohomology.
+No comparison with Galois cohomology is assumed.
+-/
+
 noncomputable section
 
 universe u
@@ -126,5 +136,91 @@ def etaleFieldKummerEquiv (K : Type u) [Field K] [CharZero K]
     exact (etaleFieldKummerBoundary_eq_zero_iff K hn s).symm
   exact (QuotientAddGroup.quotientAddEquivOfEq hker).trans
     (QuotientAddGroup.quotientKerEquivOfSurjective δ (etaleFieldKummerBoundary_surjective K hn))
+
+
+/-- Hilbert 90 also vanishes at the terminal object in the actual cohomology
+presheaf, through the proved terminal-object comparison. -/
+theorem etaleMultiplicativeGroup_H1_terminal_eq_zero_of_field
+    (K : Type u) [Field K] [CharZero K]
+    (a : Sheaf.H'.{u} (etaleMultiplicativeGroupSheaf (Spec (.of K))) 1
+      (Scheme.Etale.mk (𝟙 (Spec (.of K))))) : a = 0 := by
+  let hT : IsTerminal (Scheme.Etale.mk (𝟙 (Spec (.of K)))) :=
+    MorphismProperty.Over.mkIdTerminal
+      (show MorphismProperty Scheme.{u} from @Etale) (Spec (.of K))
+  let e : Sheaf.H.{u} (etaleMultiplicativeGroupSheaf (Spec (.of K))) 1 ≃+
+      Sheaf.H'.{u} (etaleMultiplicativeGroupSheaf (Spec (.of K))) 1
+        (Scheme.Etale.mk (𝟙 (Spec (.of K)))) :=
+    sheafCohomologyTerminalEquiv _ hT _ 1
+  obtain ⟨b, rfl⟩ := e.surjective a
+  rw [etaleMultiplicativeGroup_H1_eq_zero_of_field K b, map_zero]
+
+/-- Every actual roots-of-unity H1 class over a field is the Kummer class
+of a unit section. -/
+theorem etaleKummerBoundary_surjective_of_field
+    (K : Type u) [Field K] [CharZero K] {n : ℕ}
+    (hn : 0 < n) (hnK : IsUnit (n : Γ(Spec (.of K), ⊤))) :
+    Function.Surjective
+      (etaleKummerBoundary (Spec (.of K)) hn hnK
+        (Scheme.Etale.mk (𝟙 (Spec (.of K))))) := by
+  intro a
+  let X : Scheme.{u} := Spec (.of K)
+  let T : X.Etale := Scheme.Etale.mk (𝟙 X)
+  let P : Sheaf X.smallEtaleTopology AddCommGrpCat.{u} :=
+    (freeAbelianSheafYoneda X.smallEtaleTopology).obj T
+  have hS : (etaleKummerComplex X n).ShortExact :=
+    etaleKummerComplex_shortExact X hn hnK
+  obtain ⟨b, hb⟩ := Ext.covariant_sequence_exact₁ P hS a
+    (etaleMultiplicativeGroup_H1_terminal_eq_zero_of_field K _) (n₀ := 0) rfl
+  obtain ⟨f, rfl⟩ := (Ext.mk₀_bijective P (etaleMultiplicativeGroupSheaf X)).surjective b
+  refine ⟨freeAbelianSheafYonedaHomEquiv X.smallEtaleTopology T
+    (etaleMultiplicativeGroupSheaf X) f, ?_⟩
+  change (Ext.mk₀ ((freeAbelianSheafYonedaHomEquiv X.smallEtaleTopology T
+    (etaleMultiplicativeGroupSheaf X)).symm
+      (freeAbelianSheafYonedaHomEquiv X.smallEtaleTopology T
+        (etaleMultiplicativeGroupSheaf X) f))).comp hS.extClass (zero_add 1) = a
+  rw [Equiv.symm_apply_apply]
+  exact hb
+
+/-- Every actual roots-of-unity H1 class over a characteristic-zero field
+is killed by an actual finite etale cover of degree exactly n. -/
+theorem exists_degree_n_cover_killing_rootsOfUnity_H1_of_field
+    (K : Type u) [Field K] [CharZero K] {n : ℕ}
+    (hn : 0 < n) (hnK : IsUnit (n : Γ(Spec (.of K), ⊤)))
+    (a : Sheaf.H'.{u} (etaleRootsOfUnitySheaf (Spec (.of K)) n) 1
+      (Scheme.Etale.mk (𝟙 (Spec (.of K))))) :
+    ∃ (W : (Spec (.of K)).Etale)
+      (g : W ⟶ Scheme.Etale.mk (𝟙 (Spec (.of K)))),
+      IsFiniteEtale g.left ∧ Function.Surjective g.left ∧
+      (∀ x : (Scheme.Etale.mk (𝟙 (Spec (.of K)))).left, g.left.finrank x = n) ∧
+      ((etaleRootsOfUnitySheaf (Spec (.of K)) n).cohomologyPresheaf 1).map g.op a = 0 := by
+  obtain ⟨s, rfl⟩ := etaleKummerBoundary_surjective_of_field K hn hnK a
+  exact exists_degree_n_cover_killing_etaleKummerBoundary (Spec (.of K)) hn hnK _ s
+
+/-- The actual Kummer inclusion induces the coefficient map on derived H2. -/
+def etaleRootsOfUnityH2ToMultiplicativeGroup (X : Scheme.{u}) (n : ℕ) :
+    Sheaf.H.{u} (etaleRootsOfUnitySheaf X n) 2 →+
+      Sheaf.H.{u} (etaleMultiplicativeGroupSheaf X) 2 :=
+  (Ext.mk₀ (kernel.ι (etaleMultiplicativeGroupPower X n))).postcomp
+    ((constantSheaf X.smallEtaleTopology AddCommGrpCat.{u}).obj
+      (AddCommGrpCat.of (ULift.{u} ℤ))) (add_zero 2)
+
+/-- Geometric Hilbert 90 proves injectivity on actual derived H2, without
+assuming a field/Galois or Brauer comparison. -/
+theorem etaleRootsOfUnityH2ToMultiplicativeGroup_injective_of_field
+    (K : Type u) [Field K] [CharZero K] {n : ℕ}
+    (hn : 0 < n) (hnK : IsUnit (n : Γ(Spec (.of K), ⊤))) :
+    Function.Injective (etaleRootsOfUnityH2ToMultiplicativeGroup (Spec (.of K)) n) := by
+  apply (AddMonoidHom.ker_eq_bot_iff _).mp
+  rw [AddSubgroup.eq_bot_iff_forall]
+  intro a ha
+  let X : Scheme.{u} := Spec (.of K)
+  let Z : Sheaf X.smallEtaleTopology AddCommGrpCat.{u} :=
+    (constantSheaf X.smallEtaleTopology AddCommGrpCat.{u}).obj
+      (AddCommGrpCat.of (ULift.{u} ℤ))
+  have hS : (etaleKummerComplex X n).ShortExact :=
+    etaleKummerComplex_shortExact X hn hnK
+  obtain ⟨b, hb⟩ := Ext.covariant_sequence_exact₁ Z hS a ha (n₀ := 1) rfl
+  rw [etaleMultiplicativeGroup_H1_eq_zero_of_field K b, Ext.zero_comp] at hb
+  exact hb.symm
 
 end EtaleCohomology

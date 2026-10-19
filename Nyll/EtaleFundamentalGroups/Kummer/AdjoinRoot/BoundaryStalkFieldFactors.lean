@@ -12,8 +12,8 @@ import Nyll.SchemeTheory.Affine.StalkFractionField
 import Nyll.SchemeTheory.FiniteEtale.AffineEquivalence
 import Nyll.SchemeTheory.Pi1.FiniteEtale.Basic
 import Nyll.SchemeTheory.RingTheory.Ramification.TameDVR
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 import Mathlib.Algebra.Algebra.Tower
 import Mathlib.AlgebraicGeometry.AffineScheme
 import Mathlib.AlgebraicGeometry.Morphisms.Etale

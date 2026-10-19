@@ -6,7 +6,7 @@ Authors: Naganori Yamaguchi (assisted by OpenAI Codex)
 
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.RelativeNormalization
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.StandardCover
-import Nyll.EtaleFundamentalGroups.Normalization.GenericFiber
+import Nyll.SchemeTheory.Normalization.GenericFiber.IntegralClosure
 import Nyll.SchemeTheory.Normalization.Affine
 import Mathlib.AlgebraicGeometry.AffineScheme
 import Mathlib.AlgebraicGeometry.Morphisms.Finite

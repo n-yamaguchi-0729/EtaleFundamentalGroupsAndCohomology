@@ -9,8 +9,8 @@ import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.BoundaryTameCover
 import Nyll.EtaleFundamentalGroups.Kummer.Radicals.Explicit
 import Nyll.SchemeTheory.Affine.StalkFractionField
 import Nyll.EtaleFundamentalGroups.Kummer.AdjoinRoot.TameDVREquiv
-import Nyll.SchemeTheory.RingTheory.ReducedCartierDivisor
-import Nyll.SchemeTheory.RingTheory.RegularLocalDomain
+import Nyll.SchemeTheory.RingTheory.Reduced.ReducedCartierDivisor
+import Nyll.SchemeTheory.RingTheory.RegularLocal.RegularLocalDomain
 import Mathlib.Algebra.Algebra.Tower
 import Mathlib.AlgebraicGeometry.AffineScheme
 import Mathlib.AlgebraicGeometry.Pullbacks

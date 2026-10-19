@@ -7,7 +7,7 @@ Authors: Naganori Yamaguchi (assisted by OpenAI Codex)
 import Nyll.EtaleFundamentalGroups.StrictHenselian.GeometricStalkFlat
 import Nyll.EtaleFundamentalGroups.StrictHenselian.GeometricStalkTensorLocal
 import Nyll.SchemeTheory.FiniteEtale.Henselian.PointedEtale
-import Nyll.SchemeTheory.RingTheory.LocalMapLocalizationSurjective
+import Nyll.SchemeTheory.RingTheory.Localization.LocalMapLocalizationSurjective
 import Mathlib.Algebra.Algebra.Tower
 import Mathlib.Algebra.Ring.Subring.Basic
 import Mathlib.RingTheory.Flat.FaithfullyFlat.Algebra
