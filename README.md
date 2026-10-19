@@ -9,7 +9,7 @@ categories to cohomological comparisons and trace constructions. The [mathematic
 introduces selected results; the chapter inventory below distinguishes completed
 statements from partial results and the remaining goals.
 
-## Goal and coverage
+## Stacks Project coverage
 
 The goal is a complete formalization of the following Stacks Project chapters:
 
@@ -246,51 +246,33 @@ the goal, and no chapter is complete.
 
 </details>
 
-## Current results and open problems
+## Public API
 
-<!-- nyll-publication:etale-current-endpoints:begin -->
-### Étale fundamental groups
+Use [leanprover/lean4:v4.35.0-rc2](lean-toolchain) and the Mathlib revision pinned in
+[lake-manifest.json](lake-manifest.json). Add this dependency to your project’s
+lakefile.toml:
 
-Finite étale covers of a proper scheme are invariant under extension
-of separably closed fields (including transcendental extension): [`pullback_isEquivalence_of_isProper_of_isSepClosed_constant_extension`](Nyll/EtaleFundamentalGroups/FiniteEtale/ProperSeparablyClosedExtension.lean#L86).
-The projection induces the continuous fundamental-group isomorphism [`fundamentalGroupEquivProperConstantExtension`](Nyll/EtaleFundamentalGroups/GeometricFiber/ProperConstantExtensionFundamentalGroup.lean#L42).
+```toml
+[[require]]
+name = "Nyll"
+git = "https://github.com/n-yamaguchi-0729/EtaleFundamentalGroupsAndCohomology.git"
+rev = "main"
+```
 
-For a proper scheme over a henselian local ring, closed-fibre restriction is
-fully faithful. Affine adic effectivity and compatible closed-projective
-generators and syzygy comparisons are constructed. Global algebraization
-and essential surjectivity for [58.9.1](https://stacks.math.columbia.edu/tag/0A48)
-and [58.9.2](https://stacks.math.columbia.edu/tag/0GS2), and the general
-specialization maps of [58.16](https://stacks.math.columbia.edu/tag/0BUP) and
-[58.30](https://stacks.math.columbia.edu/tag/0BUQ), remain unfinished.
-
-### Étale cohomology and traces
-
-The cohomology library proves proper henselian H⁰ comparison and H¹
-injectivity for arbitrary commutative-ring coefficients: [`etaleClosedFiber_globalSections_bijective`](Nyll/EtaleCohomology/Sites/ProperHenselianH0.lean#L69) and [`etaleClosedFiber_cohomology_one_injective`](Nyll/EtaleCohomology/Classical/ProperHenselianH1.lean#L163). Finite direct image has no positive higher direct images and gives the
-coefficient-linear comparison Hⁿ(Y, f_*F) ≃ Hⁿ(X, F) for every n: [`etaleCohomologyFinitePushforwardEquiv`](Nyll/EtaleCohomology/Classical/FinitePushforward.lean#L112).
-It commutes with arbitrary base change for module sheaves.
-
-The trace of an endomorphism of a supplied perfect complex is defined by [`perfectComplexTrace`](Nyll/EtaleCohomology/Trace/Perfect.lean#L203), with model independence, cyclicity, shift signs and the proved cone formula.
-Constant-coefficient Frobenius actions and all positive iterates are compared in [`finiteFieldFrobeniusCohomology_pow_eq_constantFieldAction`](Nyll/EtaleCohomology/Frobenius/ModuleConstantFieldAction.lean#L130).
-
-Higher proper base change, general Nagata compactification, compactly
-supported cohomology and its finiteness/perfectness, the nonconstant
-coefficient Frobenius comparison, and the geometric trace calculation
-remain open. The Grothendieck–Lefschetz formulas
-[64.20.4](https://stacks.math.columbia.edu/tag/03V3) and
-[64.20.5](https://stacks.math.columbia.edu/tag/03V2) are not yet proved.
-<!-- nyll-publication:etale-current-endpoints:end -->
-
-## Use and build
+Run `lake update Nyll`, then commit your generated lake-manifest.json to retain
+the resolved revisions. Import the library in a Lean file:
 
 ```lean
 import Nyll.EtaleFundamentalGroups.All
 import Nyll.EtaleCohomology.All
 ```
 
-From the repository root, with the pinned [`lean-toolchain`](lean-toolchain):
+The standalone distributions share the package name Nyll. Choose one distribution;
+for several libraries together, use [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
 
-```console
+To build a checkout of this repository, run from its root:
+
+```sh
 lake exe cache get
 lake --wfail build
 ```
