@@ -253,7 +253,7 @@ the goal, and no chapter is complete.
 
 Finite étale covers of a proper scheme are invariant under extension
 of separably closed fields (including transcendental extension): [`pullback_isEquivalence_of_isProper_of_isSepClosed_constant_extension`](Nyll/EtaleFundamentalGroups/FiniteEtale/ProperSeparablyClosedExtension.lean#L86).
-The projection induces the actual continuous fundamental-group isomorphism [`fundamentalGroupEquivProperConstantExtension`](Nyll/EtaleFundamentalGroups/GeometricFiber/ProperConstantExtensionFundamentalGroup.lean#L42). No smoothness, reducedness or connectedness assumption on the proper scheme is needed.
+The projection induces the continuous fundamental-group isomorphism [`fundamentalGroupEquivProperConstantExtension`](Nyll/EtaleFundamentalGroups/GeometricFiber/ProperConstantExtensionFundamentalGroup.lean#L42).
 
 For a proper scheme over a henselian local ring, closed-fibre restriction is
 fully faithful. Affine adic effectivity and compatible closed-projective
@@ -268,7 +268,7 @@ specialization maps of [58.16](https://stacks.math.columbia.edu/tag/0BUP) and
 The cohomology library proves proper henselian H⁰ comparison and H¹
 injectivity for arbitrary commutative-ring coefficients: [`etaleClosedFiber_globalSections_bijective`](Nyll/EtaleCohomology/Sites/ProperHenselianH0.lean#L69) and [`etaleClosedFiber_cohomology_one_injective`](Nyll/EtaleCohomology/Classical/ProperHenselianH1.lean#L163). Finite direct image has no positive higher direct images and gives the
 coefficient-linear comparison Hⁿ(Y, f_*F) ≃ Hⁿ(X, F) for every n: [`etaleCohomologyFinitePushforwardEquiv`](Nyll/EtaleCohomology/Classical/FinitePushforward.lean#L112).
-It commutes with arbitrary base change for module sheaves, without a torsion, flatness or finite-presentation hypothesis.
+It commutes with arbitrary base change for module sheaves.
 
 The trace of an endomorphism of a supplied perfect complex is defined by [`perfectComplexTrace`](Nyll/EtaleCohomology/Trace/Perfect.lean#L203), with model independence, cyclicity, shift signs and the proved cone formula.
 Constant-coefficient Frobenius actions and all positive iterates are compared in [`finiteFieldFrobeniusCohomology_pow_eq_constantFieldAction`](Nyll/EtaleCohomology/Frobenius/ModuleConstantFieldAction.lean#L130).
@@ -280,14 +280,6 @@ remain open. The Grothendieck–Lefschetz formulas
 [64.20.4](https://stacks.math.columbia.edu/tag/03V3) and
 [64.20.5](https://stacks.math.columbia.edu/tag/03V2) are not yet proved.
 <!-- nyll-publication:etale-current-endpoints:end -->
-
-## Included sources
-
-<!-- nyll-publication:distribution:begin -->
-Only the module-level import closure of `Nyll.EtaleFundamentalGroups.All`, `Nyll.EtaleCohomology.All` is bundled. Dependencies retain their canonical `Nyll` imports.
-
-Supporting modules are included from [AbelianVarieties](Nyll/AbelianVarieties/), [AlgebraicCurves](Nyll/AlgebraicCurves/), [ClassFieldTheory](Nyll/ClassFieldTheory/), [GaloisCohomology](Nyll/GaloisCohomology/), [ProCGroups](Nyll/ProCGroups/), [SchemeTheory](Nyll/SchemeTheory/), [ValuedFieldTheory](Nyll/ValuedFieldTheory/). These dependency libraries are included only to the extent required by the imports.
-<!-- nyll-publication:distribution:end -->
 
 ## Use and build
 
