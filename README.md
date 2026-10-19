@@ -3,16 +3,11 @@
 [![Lean](https://github.com/n-yamaguchi-0729/EtaleFundamentalGroupsAndCohomology/actions/workflows/lean.yml/badge.svg)](https://github.com/n-yamaguchi-0729/EtaleFundamentalGroupsAndCohomology/actions/workflows/lean.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-Lean 4.35.0-rc2 libraries for étale fundamental groups and étale cohomology, extracted
-from [NYLL](https://github.com/n-yamaguchi-0729/NYLL).
-
-[Library overview and selected results](https://n-yamaguchi-0729.github.io/NYLL/libraries/etale-fundamental-groups-and-cohomology/).
-
-<!-- nyll-publication:distribution:begin -->
-Only the module-level import closure of `Nyll.EtaleFundamentalGroups.All`, `Nyll.EtaleCohomology.All` is bundled. Dependencies retain their canonical `Nyll` imports.
-
-Supporting modules are included from [AbelianVarieties](Nyll/AbelianVarieties/), [AlgebraicCurves](Nyll/AlgebraicCurves/), [ClassFieldTheory](Nyll/ClassFieldTheory/), [GaloisCohomology](Nyll/GaloisCohomology/), [ProCGroups](Nyll/ProCGroups/), [SchemeTheory](Nyll/SchemeTheory/), [ValuedFieldTheory](Nyll/ValuedFieldTheory/). These dependency libraries are included only to the extent required by the imports.
-<!-- nyll-publication:distribution:end -->
+These Lean libraries develop étale fundamental groups and étale cohomology
+within [NYLL](https://github.com/n-yamaguchi-0729/NYLL), following the Stacks Project from finite étale covers and Galois
+categories to cohomological comparisons and trace constructions. The [mathematical guide](https://n-yamaguchi-0729.github.io/NYLL/libraries/etale-fundamental-groups-and-cohomology/)
+introduces selected results; the chapter inventory below distinguishes completed
+statements from partial results and the remaining goals.
 
 ## Goal and coverage
 
@@ -251,9 +246,11 @@ the goal, and no chapter is complete.
 
 </details>
 
-## Current endpoints and remaining comparisons
+## Current results and open problems
 
 <!-- nyll-publication:etale-current-endpoints:begin -->
+### Étale fundamental groups
+
 Finite étale covers of a proper scheme are invariant under extension
 of separably closed fields (including transcendental extension): [`pullback_isEquivalence_of_isProper_of_isSepClosed_constant_extension`](Nyll/EtaleFundamentalGroups/FiniteEtale/ProperSeparablyClosedExtension.lean#L86).
 The projection induces the actual continuous fundamental-group isomorphism [`fundamentalGroupEquivProperConstantExtension`](Nyll/EtaleFundamentalGroups/GeometricFiber/ProperConstantExtensionFundamentalGroup.lean#L42). No smoothness, reducedness or connectedness assumption on the proper scheme is needed.
@@ -265,6 +262,8 @@ and essential surjectivity for [58.9.1](https://stacks.math.columbia.edu/tag/0A4
 and [58.9.2](https://stacks.math.columbia.edu/tag/0GS2), and the general
 specialization maps of [58.16](https://stacks.math.columbia.edu/tag/0BUP) and
 [58.30](https://stacks.math.columbia.edu/tag/0BUQ), remain unfinished.
+
+### Étale cohomology and traces
 
 The cohomology library proves proper henselian H⁰ comparison and H¹
 injectivity for arbitrary commutative-ring coefficients: [`etaleClosedFiber_globalSections_bijective`](Nyll/EtaleCohomology/Sites/ProperHenselianH0.lean#L69) and [`etaleClosedFiber_cohomology_one_injective`](Nyll/EtaleCohomology/Classical/ProperHenselianH1.lean#L163). Finite direct image has no positive higher direct images and gives the
@@ -281,6 +280,14 @@ remain open. The Grothendieck–Lefschetz formulas
 [64.20.4](https://stacks.math.columbia.edu/tag/03V3) and
 [64.20.5](https://stacks.math.columbia.edu/tag/03V2) are not yet proved.
 <!-- nyll-publication:etale-current-endpoints:end -->
+
+## Included sources
+
+<!-- nyll-publication:distribution:begin -->
+Only the module-level import closure of `Nyll.EtaleFundamentalGroups.All`, `Nyll.EtaleCohomology.All` is bundled. Dependencies retain their canonical `Nyll` imports.
+
+Supporting modules are included from [AbelianVarieties](Nyll/AbelianVarieties/), [AlgebraicCurves](Nyll/AlgebraicCurves/), [ClassFieldTheory](Nyll/ClassFieldTheory/), [GaloisCohomology](Nyll/GaloisCohomology/), [ProCGroups](Nyll/ProCGroups/), [SchemeTheory](Nyll/SchemeTheory/), [ValuedFieldTheory](Nyll/ValuedFieldTheory/). These dependency libraries are included only to the extent required by the imports.
+<!-- nyll-publication:distribution:end -->
 
 ## Use and build
 
